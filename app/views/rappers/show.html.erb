@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rapper %>
+
+<div>
+  <%= link_to "Edit this rapper", edit_rapper_path(@rapper) %> |
+  <%= link_to "Back to rappers", rappers_path %>
+
+  <%= button_to "Destroy this rapper", @rapper, method: :delete %>
+</div>
