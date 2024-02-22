@@ -1,6 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<div> 
+  test : <% @rappers.each do |rapper| %>
+    <%= image_tag(rapper.image, alt: "") %>
+      <% end %>
+</div>
 
-<h1>Rappers</h1>
+
+<h2>Rappers</h2>
 
 <div id="rappers">
   <% @rappers.each do |rapper| %>
