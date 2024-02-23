@@ -13,3 +13,117 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: #fef8f8;}
+  
+   html{
+      scroll-behavior: smooth;
+   }
+  
+   body{
+      background-color: #11306E;
+   }
+  
+   h1 {
+     padding-top: 24px;
+     padding-bottom: 16px;
+     text-align: center;
+     font-size: 26px ;
+     font-weight: 700;
+   } 
+   h1 span {
+     font-weight: 200;
+   }
+   h2{
+     font-size: 22px;
+     font-weight: 600;
+     text-align: center;
+   }
+  
+  .hero {
+     display: flex;
+     justify-content: space-between;
+  }
+  
+  
+   a{
+     text-decoration: underline;
+     text-underline-offset: 0.4em;
+     position: relative;
+     transition: all .4s ease-in-out;
+   }
+   a::after {
+     content: attr(data-text);
+     position: absolute;
+     top: 100%;
+     left: 0;
+     display: none;
+   }
+  
+   a:hover{
+     animation: roulette 0.4s ease-in-out 1;
+   }
+  
+   a:hover a::after{
+     animation: roulette 0.4s ease-in-out 1;
+   }
+  
+   @keyframes roulette {
+     0% {
+        transform: translateY(0%);
+     }
+     25% {
+        transform: translateY(25%);
+     }
+     50% {
+        transform: translateY(50%);
+     }
+     100% {
+        transform: translateY(100%);
+     }
+   }
+  
+  
+   .grid {
+     margin-top: 48px;
+     margin-right: auto;
+     margin-left: auto;
+     width: 90%;
+     display: grid;
+     grid-template-columns: 1fr;
+     justify-content: center;
+     align-items: center;
+     gap: 32px;
+   }
+  
+   .rapper {
+     text-align: center;
+     width: 200px;
+     margin: 0 auto;
+  }
+  .rapper img {
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+   }
+  
+  
+   
+   @media screen and (min-width: 768px) {
+     .grid {
+       grid-template-columns: repeat(3, 1fr);
+     }
+   }
+   
+   @media screen and (min-width: 992px) {
+     .grid {
+       grid-template-columns: repeat(5, 1fr);
+     }
+   }
