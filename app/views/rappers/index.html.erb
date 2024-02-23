@@ -1,19 +1,17 @@
-<div> 
-  test : <% @rappers.each do |rapper| %>
-    <%= image_tag(rapper.image, alt: "") %>
-      <% end %>
-</div>
+<h1>Rap<span>Guez</span></h1>
+<section class="hero">
+  <h2>Nos rappeurs</h2>
+    <%= link_to "Ajouter un rappeur ?", new_rapper_path, data: {text: "Ajouter un rappeur ?"} %>
+</section>
 
 
-<h2>Rappers</h2>
-
-<div id="rappers">
+<section class="grid">
   <% @rappers.each do |rapper| %>
-    <%= render rapper %>
-    <p>
-      <%= link_to "Show this rapper", rapper %>
-    </p>
+    <div class="rapper">
+        <%= image_tag(rapper.image) %>
+        <p>
+          <%= rapper.name%>
+        </p>
+    </div>
   <% end %>
-</div>
-
-<%= link_to "New rapper", new_rapper_path %>
+</section>
