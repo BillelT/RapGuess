@@ -6,6 +6,10 @@
     list-style-type: none;
     text-decoration: none;
     color: #fef8f8;}
+
+    input {
+      color: #010101;
+    }
   
    html{
       scroll-behavior: smooth;
